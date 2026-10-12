@@ -189,3 +189,13 @@ The free address check runs on every listing. Everything paid waits until the fi
 - **Cross-listing graph.** Cluster listings that share a phone number, a photo or the same text, and score the cluster instead of the single listing.
 - **Perceptual hashing.** Match photos by content rather than by a URL lookup.
 - **More sites.** Each new site needs an allow-list entry and a card selector.
+
+---
+
+## Credits
+
+Built at the **What Would Jev Do?** hackathon with AdaL, Glasser and Jev. Thanks to Li Yin, Aria Shi at AdaL and Xiao (Scarlett) Guo at Glasser, whose kickoff session got this started.
+
+AdaL wrote the code, wired up the data sources, ran the tests and made the demo video. Jev supplies the probabilities. Glasser supplies the evidence and hosts Jev.
+
+No API keys are in this repository. Copy `.env.example` to `.env` and add your own.
