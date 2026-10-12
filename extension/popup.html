@@ -1,0 +1,15 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  body { font: 13px system-ui, sans-serif; width: 260px; margin: 12px; }
+  h1 { font-size: 14px; margin: 0 0 8px; }
+  .row { display: flex; justify-content: space-between; padding: 3px 0; }
+  .ok { color: #1f9d55; font-weight: 600; } .no { color: #e02424; font-weight: 600; } .warn { color: #b7791f; font-weight: 600; }
+  small { color: #666; }
+</style>
+<h1>Scam Listing Detector</h1>
+<div class="row"><span>Relay</span><span id="relay">checking...</span></div>
+<div class="row"><span>Jev</span><span id="jev">-</span></div>
+<div class="row"><span>Glasser</span><span id="glasser">-</span></div>
+<p><small>Run <code>npm run relay</code> first. Labels are risk signals, not proof.</small></p>
+<script src="popup.js"></script>

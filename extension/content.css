@@ -1,0 +1,32 @@
+/* Overlays only. They add no height, so the page never shifts. */
+.scam-wrap { position: absolute; inset: 0; pointer-events: none; z-index: 50; }
+.scam-badge {
+  position: absolute; top: 8px; right: 8px; pointer-events: auto;
+  font: 600 12px/1 system-ui, sans-serif; padding: 6px 10px; border-radius: 999px;
+  color: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.35); cursor: help;
+}
+.scam-low { background: #1f9d55; }
+.scam-suspicious { background: #d69e2e; color: #1a1a1a; }
+.scam-scam { background: #e02424; }
+.scam-unscored { background: #6b7280; }
+/* The reasons panel, shown on badge hover. Inside the card, so it can be styled
+   and captured. Never intercepts the mouse. */
+.scam-why {
+  position: absolute; top: 38px; right: 8px; max-width: 360px; display: none;
+  pointer-events: none; background: rgba(15,15,15,.95); color: #fff;
+  font: 500 13px/1.45 system-ui, sans-serif; text-align: left;
+  padding: 12px 14px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,.4);
+}
+.scam-why > div { margin: 4px 0 0 2px; }
+.scam-why > small { display: block; margin-top: 8px; opacity: .7; font-size: 11px; }
+.scam-wrap.scam-show-why .scam-why { display: block; }
+.scam-stamp {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  font: 900 44px/1 Impact, system-ui, sans-serif; letter-spacing: 3px;
+  color: rgba(224,36,36,.85); border: 5px solid rgba(224,36,36,.85);
+  padding: 4px 16px; border-radius: 8px; background: rgba(255,255,255,.35);
+  animation: scam-pop .34s cubic-bezier(.2,1.6,.4,1) both;
+}
+@keyframes scam-pop { from { opacity: 0; transform: translate(-50%,-50%) rotate(-12deg) scale(2.2); } }
+@media (prefers-reduced-motion: reduce) { .scam-stamp { animation: none; } }

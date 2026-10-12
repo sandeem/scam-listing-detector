@@ -1,0 +1,29 @@
+SCAM LISTING DETECTOR - SOCIAL POST
+
+Publish this on LinkedIn or X. It has to be public, and it has to tag AdaL and Glasser as accounts, not only as hashtags. Type @ and pick them: AdaL is https://www.linkedin.com/company/sylphai/ on LinkedIn and @adalagent on X, Glasser is https://www.linkedin.com/company/glasser-ai/ on LinkedIn and @Glasserai on X.
+
+Copy everything between the two dashed lines. Each paragraph is one unbroken line on purpose, so nothing splits mid-sentence when you paste it.
+
+----------------------------- POST TEXT -----------------------------
+
+I've been apartment hunting, and the same listing keeps showing up in different clothes: the landlord is overseas, the rent is half of what the neighbourhood goes for, and the deposit is due before you ever see the door. 😤
+
+After nearly falling for one, I stopped trying to spot them by eye and built something instead.
+
+Scam Listing Detector is a Chrome extension that labels rental listings while you scroll: 🟢 Low risk, 🟡 Suspicious, 🔴 Likely scam. Hover any badge and it tells you exactly why.
+
+🔎 Jev answers eleven small yes/no questions about each listing and hands back probabilities, so the reading is the model's and the weighing is ours.
+
+📊 Glasser brings the outside evidence: web scam reports, an address lookup, a reverse image search on the photos, and public property records.
+
+The extension never touches an API key. A small local relay holds them, so the browser only ever sees a verdict.
+
+Built with AdaL & Glasser at the What Would Jev Do? hackathon.
+
+A verdict is a risk signal, not proof. Don't accuse anyone.
+
+#AdaL #Glasser #WhatWouldJevDo #buildinpublic
+
+----------------------------- END POST TEXT -----------------------------
+
+Facts checked against the project: eleven questions, not ten (extension/lib/core.js); Jev runs through Glasser so one key covers model and data; the 25% gate means a clean listing costs nothing and a worrying one costs about ten cents; README.md lists every evidence endpoint and its price.

@@ -1,0 +1,19 @@
+# credentials, never commit
+.env
+*.key
+*.pem
+credentials*
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# node
+node_modules/
+
+# generated at run time (the committed screenshots and demo video live in media/)
+out/
+
+# os
+.DS_Store

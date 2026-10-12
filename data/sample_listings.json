@@ -1,0 +1,20 @@
+[
+  {"id": "r1", "title": "Bright 2BR near Zilker Park", "city": "Austin", "beds": 2, "price": 1850,
+   "contact": "Maple Property Mgmt, office@maplepm.example.com",
+   "description": "Updated 2BR/1BA, in-unit laundry. Tours Saturdays 10-2. Application fee $45 via the property portal. Pets considered."},
+  {"id": "r2", "title": "Cozy 2BR duplex, East Austin", "city": "Austin", "beds": 2, "price": 1720,
+   "contact": "Dana Ruiz, 512-555-0142",
+   "description": "Quiet duplex, fenced yard. Open house Sunday. Lease signed in person with ID. Deposit one month, due at signing."},
+  {"id": "r3", "title": "Sunny 2BR condo, South Austin", "city": "Austin", "beds": 2, "price": 1900,
+   "contact": "Lone Star Rentals, 512-555-0177",
+   "description": "Gated community, pool, covered parking. Tours by appointment. Standard screening applies."},
+  {"id": "s1", "title": "LUXURY 2BR Downtown - only $650!!", "city": "Austin", "beds": 2, "price": 650,
+   "contact": "james.hartley.owner@gmail.com, WhatsApp +44 7700 900123",
+   "description": "I am out of the country as a missionary so I cannot show the apartment. Keys will be mailed after you send the deposit by Zelle. Many applicants, act now, first come first served!"},
+  {"id": "s2", "title": "Gorgeous 2BR house, great price", "city": "Austin", "beds": 2, "price": 780,
+   "contact": "Telegram @rent_austin_fast",
+   "description": "Owner overseas. Pay the first month and deposit with gift cards or wire before viewing to hold the unit. Text only. Hurry, today only."},
+  {"id": "s3", "title": "Charming 2BR, no credit check", "city": "Austin", "beds": 2, "price": 990,
+   "contact": "WhatsApp only +1 415 555 0199",
+   "description": "Listing reported by a few renters as fake. Cannot show in person. Send crypto deposit to reserve. Urgent, many applicants."}
+]

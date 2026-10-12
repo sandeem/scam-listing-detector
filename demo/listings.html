@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8">
+<title>RentBoard (demo) - Austin rentals</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #f3f4f6; margin: 0; }
+  header { background: #1e3a8a; color: #fff; padding: 18px 28px; position: sticky; top: 0; z-index: 100; }
+  header small { opacity: .75; margin-left: 12px; }
+  main { max-width: 760px; margin: 24px auto; padding: 0 16px 80px; }
+  .card { background: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 22px; min-height: 150px;
+          box-shadow: 0 1px 3px rgba(0,0,0,.12); display: flex; gap: 16px; }
+  .pic { width: 150px; height: 120px; border-radius: 8px; background: linear-gradient(135deg,#cbd5e1,#e2e8f0); flex: none; }
+  .card h3 { margin: 0 0 4px; font-size: 17px; } .price { font-size: 20px; font-weight: 700; color: #1e3a8a; }
+  .meta { color: #6b7280; font-size: 13px; margin: 2px 0 8px; } .desc { font-size: 14px; color: #374151; }
+</style>
+<header><b>RentBoard</b><small>DEMO SITE. All listings are fictional.</small></header>
+<main id="feed"></main>
+<script>
+  // Fictional listings. Mix of normal and scam-style posts, for demos only.
+  const L = [
+    ["Bright 2BR near Zilker Park", 1850, "Austin · 2 bd · 1 ba", "Updated 2BR/1BA, in-unit laundry. Tours Saturdays 10-2. Application fee $45 via the property portal. Contact Maple Property Mgmt, office@maplepm.example.com."],
+    ["LUXURY 2BR Downtown - only $650!!", 650, "Austin · 2 bd · 2 ba", "I am out of the country as a missionary so I cannot show the apartment. Keys will be mailed after you send the deposit by Zelle. Many applicants, act now, first come first served! Email james.hartley.owner@gmail.com or WhatsApp +44 7700 900123."],
+    ["Cozy 2BR duplex, East Austin", 1720, "Austin · 2 bd · 1 ba", "Quiet duplex, fenced yard. Open house Sunday. Lease signed in person with ID. Deposit one month, due at signing. Call Dana Ruiz at 512-555-0142."],
+    ["Gorgeous 2BR house, great price", 780, "Austin · 2 bd · 2 ba", "Owner overseas. Pay the first month and deposit with gift cards or wire before viewing to hold the unit. Text only. Hurry, today only. Telegram @rent_austin_fast."],
+    ["Sunny 2BR condo, South Austin", 1900, "Austin · 2 bd · 2 ba", "Gated community, pool, covered parking. Tours by appointment. Standard screening applies. Lone Star Rentals, 512-555-0177."],
+    ["Charming 2BR, no credit check", 990, "Austin · 2 bd · 1 ba", "Listing reported by a few renters as fake. Cannot show in person. Send crypto deposit to reserve. Urgent, many applicants. WhatsApp only +1 415 555 0199."],
+    ["Modern 2BR loft, Mueller", 2050, "Austin · 2 bd · 2 ba", "Open floor plan, balcony, gym access. Self-guided tours daily through the leasing office. Pets welcome with deposit paid at signing. Mueller Lofts Leasing, 512-555-0121."],
+    ["Spacious 2BR, North Loop - Act NOW", 700, "Austin · 2 bd · 1 ba", "I am abroad for work, my agent will mail the keys after you wire the first month. Hurry, many applicants. gmail only: north.loop.rentals@gmail.com."],
+    ["Renovated 2BR townhome, Hyde Park", 1795, "Austin · 2 bd · 1.5 ba", "New flooring, fenced patio. Viewings Tue/Thu evenings. Application and screening through a licensed broker. Hyde Park Realty, 512-555-0188."],
+    ["Quiet 2BR near campus", 1680, "Austin · 2 bd · 1 ba", "Walk to campus, bus stop at the corner. In-person showing required before any payment. Contact Priya at 512-555-0166."]
+  ];
+  const feed = document.getElementById('feed');
+  for (const [t, p, m, d] of L) {
+    const el = document.createElement('div');
+    el.className = 'card'; el.setAttribute('data-listing-card', '');
+    el.innerHTML = `<div class="pic"></div><div><h3></h3><div class="price"></div><div class="meta"></div><div class="desc"></div></div>`;
+    el.querySelector('h3').textContent = t;
+    el.querySelector('.price').textContent = '$' + p.toLocaleString('en-US') + '/mo';
+    el.querySelector('.meta').textContent = m;
+    el.querySelector('.desc').textContent = d;
+    feed.appendChild(el);
+  }
+</script>

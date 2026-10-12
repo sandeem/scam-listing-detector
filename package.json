@@ -1,0 +1,11 @@
+{
+  "name": "scam-listing-detector",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension + local relay that flags suspicious rental listings with Jev and Glasser.",
+  "scripts": {
+    "relay": "node relay/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": { "node": ">=20" }
+}

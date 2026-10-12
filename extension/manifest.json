@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Scam Listing Detector (Jev)",
+  "version": "0.2.0",
+  "description": "Labels rental listings as you scroll: Looks real, Suspicious or Likely scam. Read-only.",
+  "permissions": [],
+  "host_permissions": [
+    "http://127.0.0.1:8790/*",
+    "https://*.craigslist.org/*",
+    "https://www.zillow.com/*",
+    "https://www.apartments.com/*",
+    "https://www.trulia.com/*",
+    "https://www.redfin.com/*",
+    "https://www.zumper.com/*",
+    "https://www.hotpads.com/*",
+    "https://www.facebook.com/marketplace/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Scam Listing Detector", "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://127.0.0.1:8790/*",
+        "https://*.craigslist.org/*",
+        "https://www.zillow.com/*",
+        "https://www.apartments.com/*",
+        "https://www.trulia.com/*",
+        "https://www.redfin.com/*",
+        "https://www.zumper.com/*",
+        "https://www.hotpads.com/*",
+        "https://www.facebook.com/marketplace/*"
+      ],
+      "js": ["lib/core.js", "lib/sites.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
